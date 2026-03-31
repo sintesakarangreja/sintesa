@@ -1,0 +1,2 @@
+# sintesa
+aplikasi sintesa
