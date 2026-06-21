@@ -8,6 +8,15 @@
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #f1f5f9; }
         iframe { border: none; width: 100%; height: 100%; }
     </style>
+     <!-- TAMBAHKAN SCRIPT INI -->
+    <script>
+        // Menangkap instruksi dari Iframe Google Apps Script
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'SET_PRINT_TITLE') {
+                document.title = event.data.title; // Ubah judul tab utama
+            }
+        });
+    </script>
 </head>
 <body>
     <!-- Production -->
